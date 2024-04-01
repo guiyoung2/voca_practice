@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.flex {
+    display: flex;
+    gap: 50px;
+}
+.choice_word {
+    text-align: center;
+    font-size: 30px;
+    padding: 50px 0;
+}
+.page-btns {
+    display: flex;
+    gap: 20px;
+}
+.page-btns div {
+    width: 150px;
+    height: 40px;
+    background: #ead;
+    text-align: center;
+    line-height: 40px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    border-radius: 25px;
+    -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-use-select: none;
+ user-select: none;
+}
+.page-btns .answerCheck {
+    display: none;
+}
+
+.quiz .quiz_list li {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #dae;
+    border-radius: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.quiz .quiz_list li.selected {
+    background: #ccd;
+}
+
+/* .quiz_area {} */
+
+.answerArea .answerPercent {
+    text-align: center;
+    font-size: 30px;
+    padding: 40px 0;
+    font-weight: bold;
+}

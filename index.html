@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Voca</title>
+</head>
+<body>
+    <div class="flex">
+        <div class="search">
+
+            <h1>영어 단어 검색</h1>
+            
+            <label for="searchWord">단어 검색:</label>
+            <input type="text" id="searchWord" placeholder="초성을 입력하세요" oninput="searchWords()">
+            
+            <ul id="searchResult">
+                <!-- 여기에 검색 결과 표시 -->
+            </ul>
+        </div>
+        <div class="selec">
+            <h2>단원 선택</h2>
+            <select id="unitSelect" onchange="changeUnit()">
+                <option value="choice" selected>선택</option>
+                <option value="all">전체</option>
+                <option value="fruit">과일</option>
+                <option value="animal">동물</option>
+            </select>
+            <ul id="searchResult2"></ul>
+        </div>
+        <div class="quiz">
+            <h2>단어 퀴즈</h2>
+            <select id="quiz_lesson" onchange="changeLesson()">
+                <option value="선택" selected>선택</option>
+                <option value="사람 사진 빈출 어휘">day1</option>
+                <option value="animal">day2</option>
+                <option value="day3">day3</option>
+                <option value="day4">day4</option>
+            </select>
+            <div class="quiz_area">
+
+                <div class="lesson-title">단원을 선택해주세요</div>
+                <div class="choice_word"></div>
+                <ul class="quiz_list">
+                    <!-- 여기에 문제 생성 되어야함 -->
+                </ul>
+                <div class="page-btns">
+                    <!-- <div class="prev">이전 </div> -->
+                    <div class="next">다음</div>
+                    <div class="answerCheck">정답 확인하기</div>
+                </div>
+            </div>
+            <div class="answerArea">
+                <h3>정답률 확인</h3>
+                <div class="answerPercent"></div>
+            </div>
+        </div>
+        <script src="./wordData.js"></script>
+        <script src="./index.js"></script>
+</body>
+</html>
